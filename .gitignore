@@ -1,0 +1,22 @@
+# Sensitive environment variables
+.env
+.env.local
+*.env
+
+# Python caching & environments
+__pycache__/
+.venv/
+*.pyc
+
+# Frontend dependencies & builds
+node_modules/
+dist/
+
+# Local databases & ML models
+*.db
+trained_models/
+wandb/
+
+# System files
+.DS_Store
+Thumbs.db
