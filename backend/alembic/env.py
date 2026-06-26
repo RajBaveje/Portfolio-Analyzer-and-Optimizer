@@ -1,7 +1,11 @@
 import os
+import sys
 from logging.config import fileConfig
 from sqlalchemy import engine_from_config, pool, create_engine
 from alembic import context
+
+# Dynamically append the parent directory (backend/) to the Python path 
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from app.database import Base
 from app.models.ohlcv import OHLCVDaily
